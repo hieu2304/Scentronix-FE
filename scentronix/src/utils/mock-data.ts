@@ -46,3 +46,5 @@ export const itemTitle = [
     name: "Quick Bread",
   },
 ];
+
+export const IMAGE_FAKE = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgrgq-QHs0a4IyD3iRUzGt_U2UYWsHECl5lg&s";

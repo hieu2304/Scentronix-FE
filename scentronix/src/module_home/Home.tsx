@@ -1,8 +1,7 @@
 import React, { memo } from "react";
 import Image from "next/image";
-import styled from "styled-components";
 
-import { Button, colors } from "@mui/material";
+import { Button } from "@mui/material";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import AddIcon from "@mui/icons-material/Add";
@@ -10,127 +9,22 @@ import AdbIcon from "@mui/icons-material/Adb";
 import LocalPrintshopIcon from "@mui/icons-material/LocalPrintshop";
 import Divider from "@mui/material/Divider";
 
-import { categoryData, headerData, itemTitle } from "../utils/mock-data";
-
-const IMAGE_FAKE =
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgrgq-QHs0a4IyD3iRUzGt_U2UYWsHECl5lg&s";
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  width: 100%;
-
-  .header-section {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-
-  .image-icon {
-    position: absolute;
-    left: 180px;
-    top: 3px;
-  }
-
-  .sl-content {
-    gap: 4px;
-    padding: 0 160px;
-  }
-
-  .column {
-    flex-direction: column;
-  }
-
-  .gap-4pixel {
-    gap: 4px;
-  }
-
-  .gap-8pixel {
-    gap: 8px;
-  }
-
-  .padding-16pixel {
-    padding: 16px 0px;
-  }
-
-  .sl-acces-icon {
-    font-size: 40px;
-    padding: 0 4px;
-  }
-
-  .btn-error {
-    padding: 4px 8px;
-    margin: 0;
-    color: #13324b;
-    font-size: 13px;
-    font-weight: 600;
-  }
-`;
-
-const Flex = styled.div`
-  display: flex;
-
-  .center {
-    justify-content: center;
-    align-items: center;
-  }
-
-  .image {
-    padding: 16px;
-  }
-`;
-
-const Header = styled.div`
-  display: flex;
-  gap: 46px;
-  padding: 16px 160px;
-  margin-left: 120px;
-
-  .header-item {
-    font-size: 20px;
-    font-weight: 600;
-  }
-`;
-
-const Category = styled.div`
-  display: flex;
-  gap: 36px;
-  width: 100%;
-  padding: 16px 160px;
-  margin-left: 120px;
-  background-color: #fce7f2;
-
-  .category-item {
-    font-size: 16px;
-    font-weight: 400;
-  }
-`;
-
-const Description = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const Title = styled.h1`
-  font-weight: 600px;
-  margin: 0;
-  padding: 0;
-`;
-
-const Content = styled.h3`
-  font-weight: 400;
-  color: #4f6679;
-  padding: 0;
-  margin: 40px 0 0 0;
-`;
-
-const Subtitle = styled.h3`
-  font-weight: 600;
-  color: #4f6679;
-  padding: 0;
-  margin: 0;
-`;
+import {
+  Container,
+  Header,
+  Category,
+  Content,
+  Subtitle,
+  Description,
+  Flex,
+  Title,
+} from "./Home.styled";
+import {
+  categoryData,
+  headerData,
+  itemTitle,
+  IMAGE_FAKE,
+} from "../utils/mock-data";
 
 const Home = () => {
   return (
@@ -154,7 +48,13 @@ const Home = () => {
             );
           })}
         </Category>
-        <Image src={IMAGE_FAKE} alt="icon" width={80} height={80} className="image-icon"/>
+        <Image
+          src={IMAGE_FAKE}
+          alt="icon"
+          width={80}
+          height={80}
+          className="image-icon"
+        />
       </div>
       <Flex className="sl-content">
         <Description>
